@@ -5,8 +5,7 @@ import GameBanner from "./components/GameBanner"
 import CreateAdBanner from "./components/CreateAdBanner"
 import { CreateAdModal } from "./components/CreateAdModal"
 
-import './styles/main.css'
-import logoImg from './assets/icon.png'
+import logoImg from './assets/logo-nlw-esports.svg'
 
 import axios from "axios"
 interface Game {
@@ -30,10 +29,12 @@ function App() {
   }, [])
 
   return (
-    <div className="max-w-[1344px] mx-auto flex flex-col items-center my-2">
-      <img className="w-[348px] h-[348px]" src={logoImg} />
+    <div className="max-w-5xl mx-auto mt-5 flex flex-col items-center my-2">
+      <img src={logoImg} />
 
-      <h1 className="text-4xl text-[#5652B1] font-black mt-4 mx-6">Encontre seu time ideal aqui.</h1>
+      <h1 className="text-4xl md:text-6xl text-white font-black mt-20">
+        Seu <span className="text-transparent bg-nlw-gradient bg-clip-text">duo</span> está aqui.
+      </h1>
 
       <div className="grid grid-cols-6 gap-6 mt-16 mx-6">
         {games.map(game => {

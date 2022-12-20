@@ -3,16 +3,18 @@ import * as Dialog from '@radix-ui/react-dialog'
 
 const CreateAdBanner = () => {
     return (
-        <div className="flex justify-between items-center bg-[#564EAC] mt-8 mx-6 px-8 py-6 self-stretch rounded-lg border-double border-8 border-black">
-            <div>
-                <h3 className="text-2xl font-black">Ainda não encontrou companheiros para jogar?</h3>
-                <span className="text-xl text-zinc-900">Não perca tempo e crie um anúncio agora!</span>
-            </div>
+        <div className="pt-1 bg-nlw-gradient self-stretch rounded-lg mt-8 overflow-hidden">
+            <div className="bg-[#2A2634] px-8 py-6 flex flex-col md:flex-row flex-li justify-between items-center">
+                <div>
+                    <strong className="text-2xl text-white font-black block">Não encontrou seu duo?</strong>
+                    <span className="text-zinc-400 block">Publique um anúncio para encontrar novos players!</span>
+                </div>
 
-            <Dialog.Trigger className="flex items-center gap-3 p-2 bg-black text-[#5652B1] rounded-lg hover:bg-[#564EAC] hover:text-black border-collapse border-4 border-black">
-                <MagnifyingGlassPlus size={20} />
-                Criar anúncio
-            </Dialog.Trigger>
+                <Dialog.Trigger className="my-3 w-full sm:w-auto py-3 px-4 bg-violet-500 hover:bg-violet-600 text-white rounded flex items-center gap-3">
+                    <MagnifyingGlassPlus size={24} />
+                    Publicar anúncio
+                </Dialog.Trigger>
+            </div>
         </div>
     );
 }
